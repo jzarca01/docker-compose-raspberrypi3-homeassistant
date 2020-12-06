@@ -4,10 +4,14 @@ Currently this provides you with a Home Assistant server on http://raspberrypi.l
 an MQTT server (mosquitto) on port 1883.
 
 ### Installation
-`sudo apt-get install docker docker-compose`
-`git clone https://github.com/mactijn/docker-compose-raspberrypi3-homeassistant.git ./homeassistant`
+
+```
+$ sudo apt-get install docker docker-compose
+$ git clone https://github.com/mactijn/docker-compose-raspberrypi3-homeassistant.git ./homeassistant
+```
 
 Furthermore you will need to generate a mosquitto password file:
+
 ```
 $ mkdir $HOME/mosquitto
 $ mkdir $HOME/mosquitto/config
@@ -16,6 +20,7 @@ $ docker-compose run --rm --no-deps -v "$(pwd)/mosquitto/config/users.passwd:/pa
 ```
 
 ## Running Home Assistant
+
 ```
 $ docker-compose build && docker-compose pull && docker-compose up -d
 ```
