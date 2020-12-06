@@ -22,5 +22,6 @@ $ docker-compose run --rm --no-deps -v "$(pwd)/mosquitto/config/users.passwd:/pa
 ## Running Home Assistant
 
 ```
+$ cd $HOME/homeassistant
 $ docker-compose build && docker-compose pull && docker-compose up -d
 ```
