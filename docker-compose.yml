@@ -11,7 +11,7 @@ services:
     ports:
             - 0.0.0.0:8123:8123
     volumes:
-      - /usr/share/zoneinfo/Europe/Amsterdam:/etc/timezome:ro
+      - /usr/share/zoneinfo/Europe/Paris:/etc/timezome:ro
       - ./homeassistant/config:/config
     depends_on:
       - mosquitto
